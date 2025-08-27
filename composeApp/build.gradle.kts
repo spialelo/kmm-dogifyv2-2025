@@ -51,13 +51,15 @@ kotlin {
             implementation(compose.components.uiToolingPreview)
             implementation(libs.androidx.lifecycle.viewmodelCompose)
             implementation(libs.androidx.lifecycle.runtimeCompose)
-            implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.2.2")
+            implementation("io.insert-koin:koin-core:3.5.0")
+            // Ktor
             implementation("io.ktor:ktor-client-core:$ktorVersion")
-
             implementation("io.ktor:ktor-client-logging:$ktorVersion")
             implementation("io.ktor:ktor-client-content-negotiation:${ktorVersion}")
             implementation("io.ktor:ktor-server-content-negotiation:$ktorVersion")
             implementation("io.ktor:ktor-serialization-kotlinx-json:$ktorVersion")
+            // Serialization
+            implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.2.2")
 //            implementation("org.jetbrains.kotlin.plugin.serialization:1.7.10")
         }
         commonTest.dependencies {
