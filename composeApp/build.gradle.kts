@@ -7,7 +7,8 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
-   id("org.jetbrains.kotlin.plugin.serialization")
+    id("org.jetbrains.kotlin.plugin.serialization")
+    id("com.squareup.sqldelight")
 }
 
 kotlin {
@@ -31,6 +32,7 @@ kotlin {
     
     sourceSets {
         val ktorVersion="2.3.7"
+        val sqlDelightVersion = "1.5.1"
         //ktor_version="2.3.11"
 
         androidMain.dependencies {
@@ -61,6 +63,9 @@ kotlin {
             // Serialization
             implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.2.2")
 //            implementation("org.jetbrains.kotlin.plugin.serialization:1.7.10")
+            // Sql Delight
+            implementation("com.squareup.sqldelight:runtime:${sqlDelightVersion}")
+            implementation("com.squareup.sqldelight:coroutines-extensions:${sqlDelightVersion}")
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
