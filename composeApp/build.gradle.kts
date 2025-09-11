@@ -40,9 +40,11 @@ kotlin {
             implementation(libs.androidx.activity.compose)
             implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.3.1")
             implementation("io.ktor:ktor-client-android:$ktorVersion")
+            implementation("com.squareup.sqldelight:android-driver:${sqlDelightVersion}")
         }
         iosMain.dependencies {
             implementation("io.ktor:ktor-client-ios:$ktorVersion")
+            implementation("com.squareup.sqldelight:native-driver:${sqlDelightVersion}")
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -62,6 +64,7 @@ kotlin {
             implementation("io.ktor:ktor-serialization-kotlinx-json:$ktorVersion")
             // Serialization
             implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.2.2")
+            implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.0-native-mt")
 //            implementation("org.jetbrains.kotlin.plugin.serialization:1.7.10")
             // Sql Delight
             implementation("com.squareup.sqldelight:runtime:${sqlDelightVersion}")
@@ -97,6 +100,13 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
+    }
+}
+
+sqldelight {
+    database("DogifyDatabase") {
+        packageName = "com.nphillips.dogifyv2.db"
+        sourceFolders = listOf("sqldelight")
     }
 }
 

@@ -8,7 +8,6 @@ plugins {
     alias(libs.plugins.kotlinMultiplatform) apply false
     id("org.jetbrains.kotlin.plugin.serialization") version "1.7.10" apply false
     id("com.squareup.sqldelight") version "1.5.1" apply false
-//    id("com.squareup.sqldelight") version "1.5.1" apply false
 //    alias(libs.plugins.kotlinSerialization) apply false
 //    alias(org.jetbrains.kotlin.plugin.serialization) version '1.7.10'
 }
