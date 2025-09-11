@@ -32,7 +32,7 @@ kotlin {
     
     sourceSets {
         val ktorVersion="2.3.7"
-        val sqlDelightVersion = "1.5.1"
+        val sqlDelightVersion = "1.5.3"
         //ktor_version="2.3.11"
 
         androidMain.dependencies {
