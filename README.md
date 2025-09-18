@@ -14,3 +14,6 @@ This is a Kotlin Multiplatform project targeting Android, iOS.
 
 
 Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html)…
+
+Update: 18 September 2025 - Stopping project because multiple libraries are majore versions
+ahead what the author has in the book. Pivoting to up-to-date resources available on Frontendmasters.
